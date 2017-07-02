@@ -8,11 +8,11 @@ import { OpenmapWeatherService } from '../openmap-weather.service';
     styleUrls: ['./weather-list.component.css']
 })
 export class WeatherListComponent implements OnInit {
-    @Input() location: string;
     weather$: any;
     day = [];
     days =  5;
     timestampDays = [];
+    value = 'london';
 
     constructor (private openmapWeatherService: OpenmapWeatherService) { }
 
@@ -26,7 +26,11 @@ export class WeatherListComponent implements OnInit {
 
         }
 
-        this.openmapWeatherService.getLocationData(this.location).subscribe((data: any) => {
+        this.fetchData();
+    }
+
+    fetchData() {
+        this.openmapWeatherService.getLocationData(this.value).subscribe((data: any) => {
 
             data.list.map((val: any) => {
                 val.unix = parseInt(val.dt + '000', 10);
@@ -34,5 +38,15 @@ export class WeatherListComponent implements OnInit {
 
             this.weather$ = data;
         });
+    }
+
+    onEnter(value: string) {
+        if (value) {
+            this.value = value;
+        } else {
+            this.value = 'london';
+        }
+
+        this.fetchData();
     }
 }
