@@ -10,7 +10,7 @@ export class OpenmapWeatherService {
     constructor(private http: Http) {}
 
     getLocationData (location: string): Observable<Response> {
-        const url = `//api.openweathermap.org/data/2.5/forecast?q=${location},uk&mode=json&appid=${this.appid}`;
+        const url = `//api.openweathermap.org/data/2.5/forecast?q=${location},uk&mode=json&appid=${this.appid}&units=metric`;
 
         return this.http.get(url)
             .map(this.extractData)
