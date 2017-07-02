@@ -1,13 +1,13 @@
 .weather-item {
-    width: 120px;
-    height: 130px;
+    width: 140px;
+    height: 160px;
     overflow: hidden;
     float: left;
     margin-bottom: 20px;
 }
 .weather-day {
-    width: 120px;
-    height: 130px;
+    width: 140px;
+    height: 160px;
     float: left;
     clear: both;
     margin-bottom: 20px;
