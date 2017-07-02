@@ -3,12 +3,21 @@
     height: 180px;
     overflow: hidden;
     float: left;
+    margin-bottom: 20px;
 }
 .weather-day {
     width: 140px;
     height: 180px;
     float: left;
     clear: both;
+    margin-bottom: 20px;
 }
-
+.weather-item h1.date {
+    visibility: hidden;
+    font-size: 12px;
+}
+.weather-day h1.date {
+    visibility: visible;
+    font-size: 12px;
+}
 
