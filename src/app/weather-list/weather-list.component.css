@@ -1,13 +1,13 @@
 .weather-item {
-    width: 140px;
-    height: 180px;
+    width: 120px;
+    height: 130px;
     overflow: hidden;
     float: left;
     margin-bottom: 20px;
 }
 .weather-day {
-    width: 140px;
-    height: 180px;
+    width: 120px;
+    height: 130px;
     float: left;
     clear: both;
     margin-bottom: 20px;
@@ -20,4 +20,9 @@
     visibility: visible;
     font-size: 12px;
 }
-
+h4,h3,p {
+    margin: 0;
+}
+h4 {
+    text-transform: capitalize;
+}

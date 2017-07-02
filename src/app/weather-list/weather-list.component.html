@@ -7,7 +7,7 @@
                 }">
             <h1 class="date">{{ weather.unix | date:'fullDate'}}</h1>
             <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" />
-            <h3 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h3>
+            <h3> {{ weather.weather[0].main }}</h3>
             <h4 > {{ weather.weather[0].description }}</h4>
             <span class="temperature">Temp: {{ weather.main.temp | number : '1.0-0' }}c</span>
             <p>{{ weather.unix | date:'shortTime'}}</p>
