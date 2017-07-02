@@ -1,0 +1,14 @@
+.weather-item {
+    width: 140px;
+    height: 180px;
+    overflow: hidden;
+    float: left;
+}
+.weather-day {
+    width: 140px;
+    height: 180px;
+    float: left;
+    clear: both;
+}
+
+
