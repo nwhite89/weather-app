@@ -1,5 +1,7 @@
+<h1 style="text-transform: capitalize;">Weather for {{value}}</h1>
+
 <div>
-    <input #box (keyup.enter)="onEnter(box.value)" (blur)="onEnter(box.value)">
+    <input #box (keyup.enter)="onEnter(box.value)" (blur)="onEnter(box.value)"><button (click)="onEnter(box.value);">Submit</button>
     <div class="weather">
         <div *ngFor="let weather of weather$?.list; let i = index;"
             [ngClass]="{
@@ -7,7 +9,7 @@
                 'weather-item': i !== 0 || (weather.unix | date:'dd/MM/yyyy') === (weather$.list[i-1]?.unix | date:'dd/MM/yyyy')
                 }">
             <h1 class="date">{{ weather.unix | date:'fullDate'}}</h1>
-            <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" />
+            <img src="//openweathermap.org/img/w/{{weather.weather[0].icon}}.png" />
             <h3> {{ weather.weather[0].main }}</h3>
             <h4 > {{ weather.weather[0].description }}</h4>
             <span class="temperature">Temp: {{ weather.main.temp | number : '1.0-0' }}c</span>
